@@ -1,7 +1,3 @@
-@keyframes up {
-
-}
-
 *{
     font-family: 'fut';
     margin: 0;
@@ -19,6 +15,7 @@
     font-size: 15px;
     text-transform: uppercase;
     cursor: pointer;
+    outline: none;
 }
 .container{
     width: 1140px;
@@ -99,6 +96,11 @@ nav {
     padding: 10px 0 20px 0;
     border-radius: 10px;
     background-color: #fff;
+    transition: 0.5s all;
+}
+.for__item:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 9px rgb(175, 175, 175);
 }
 .for__item span {
     display: block;
@@ -132,7 +134,6 @@ nav {
     padding: 10px;
     box-shadow: 1px 1px 5px rgb(201, 201, 201);
     transition: 0.5s all;
-    cursor: pointer;
 }
 .product__descr:hover {
     transform: scale(1.1);
@@ -147,6 +148,10 @@ nav {
 .mask__descr {
     font-size: 22px;
     font-weight: 300;
+}
+.price {
+    text-align: center;
+    margin-top: 5px;
 }
 .btn__product{
     display: block;
@@ -247,7 +252,7 @@ footer {
 }
 .footer__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 .social img {
@@ -312,4 +317,65 @@ footer {
 }
 .hide {
     display: none;
+}
+.load img{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+} 
+.congratulation {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px 0 30px 0;
+    background-color: #6ac3ff;
+    box-shadow: 3px 3px 4px rgb(175, 175, 175);
+    z-index: 10;
+}
+.congratulation span,
+.error span {
+    position: absolute;
+    font-size: 25px;
+    top: -22px;
+    right: -30px;
+    cursor: pointer;
+}
+.error {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px 0 30px 0;
+    background-color: #6ac3ff;
+    box-shadow: 3px 3px 4px rgb(175, 175, 175);
+    z-index: 10;
+}
+
+/* OTHER */
+.count_input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.count_input img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.count_input input {
+    width: 50px;
+    outline: none;;
+    padding: 5px;
+    margin: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }

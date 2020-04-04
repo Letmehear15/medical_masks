@@ -2,7 +2,7 @@
 
 $name = $_POST['name'];
 $phone = $_POST['phone'];
-$email = $_POST['email'];
+$count = $_POST['count'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -13,12 +13,12 @@ $mail->CharSet = 'utf-8';
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'vanyapopov357@gmail.com';                 // Наш логин
+$mail->Username = 'orderGetMore@gmail.com';                 // Наш логин
 $mail->Password = 'Password1*';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('vanyapopov357@gmail.com', 'Pulse');   // От кого письмо 
+$mail->setFrom('orderGetMore@gmail.com', 'Маски медецинские');   // От кого письмо 
 $mail->addAddress('sanya.nesterov666@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
@@ -28,11 +28,12 @@ $mail->addAddress('sanya.nesterov666@gmail.com');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Данные';
+$mail->Subject = 'Заказ';
 $mail->Body    = '
 		Пользователь оставил данные <br> 
 	Имя: ' . $name . ' <br>
-	Номер телефона: ' . $phone;
+	Номер телефона: ' . $phone . '<br>
+	Количество: ' . $count;
 
 if(!$mail->send()) {
     return false;
