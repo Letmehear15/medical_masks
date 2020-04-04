@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'fut';
+    src: local('FuturaDemiC'),
+        url('../fonts/FuturaDemiC.woff') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'fut';
+    src: local('FuturaLightC'),
+        url('../fonts/FuturaLightC.woff') format('truetype');
+    font-weight: 300;
+}
